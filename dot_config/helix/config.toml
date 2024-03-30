@@ -1,0 +1,46 @@
+theme = "autumn_night"
+
+[editor]
+scrolloff = 10
+completion-replace = true
+
+[editor.statusline]
+left = ["mode", "file-name", "file-modification-indicator"]
+right = ["diagnostics", "spinner", "file-encoding", "version-control", "file-type"]
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+
+[editor.cursor-shape]
+insert = "bar"
+select = "underline"
+
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+
+[editor.indent-guides]
+render = true
+skip-levels = 1
+
+[editor.soft-wrap]
+enable = true
+
+[keys.normal]
+C-c = "no_op"
+C-y = "toggle_comments"
+"ret" = ":write"
+"del" = ":quit"
+
+[keys.insert]
+C-c = "normal_mode"
+
+[keys.select]
+C-c = "normal_mode"
+
+[keys.normal.M]
+M = ":run-shell-command make"

@@ -1,0 +1,32 @@
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+
+[[language]]
+name = "c"
+file-types = ["c", "h"]
+comment-token = "//"
+indent = { tab-width = 2, unit = "\t" }
+
+[[language]]
+name = "python"
+file-types = ["py"]
+comment-token = "#"
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "java"
+file-types = ["java"]
+comment-token = "//"
+indent = { tab-width = 2, unit = "\t" }
+
+[[language]]
+name = "conf"
+scope = "custom.conf"
+file-types = ["conf"]
+roots = ["."]
+comment-token = "#"
+indent = { tab-width = 2, unit = " " }
+
+[[language]]
+name = "toml"
+formatter = { command = "taplo", args = ["fmt", "-"] }
