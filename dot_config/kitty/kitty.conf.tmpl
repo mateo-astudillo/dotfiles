@@ -1,0 +1,27 @@
+# Font
+	font_family JetBrainsMono Nerd Font
+	font_size 16.0
+
+# Windows layout
+	enabled_layouts tall
+{{ if eq .chezmoi.hostname "fedora" }}
+	hide_window_decorations yes
+{{ end }}
+
+# Tab bar
+	tab_bar_style powerline
+	tab_powerline_style slanted
+	tab_bar_align right
+
+# Color scheme
+	background_opacity 0.5
+	active_border_color #ffffff
+	inactive_border_color #444444
+
+# Keyboard shortcuts
+  # Window management
+      map ctrl+shift+enter launch --cwd=current
+      map ctrl+shift+l next_window
+      map ctrl+shift+h previous_window
+      map ctrl+shift+. next_tab
+      map ctrl+shift+, previous_tab
