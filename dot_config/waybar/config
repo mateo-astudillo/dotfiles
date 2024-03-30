@@ -1,0 +1,61 @@
+{
+	"layer": "top",
+	"modules-left": ["custom/launcher","cpu","memory"],
+	"modules-center": ["hyprland/workspaces"],
+	"modules-right": ["backlight","pulseaudio","clock","network","battery"],
+	
+    "custom/launcher":{
+        "format": " ",
+        "on-click": "wofi --show drun",
+        "on-click-right": "killall rofi"
+    },
+    "cpu": {
+        "interval": 15,
+        "format": " {}%",
+        "max-length": 10
+    },
+    "memory": {
+        "interval": 30,
+        "format": " {}%",
+        "max-length": 10
+    },
+
+	"backlight": {
+		"tooltip": false,
+		"format": " {}%",
+		"interval":1,
+        "on-scroll-up": "brightnessctl -d intel_backlight set +5%",
+		"on-scroll-down": "brightnessctl -d intel_backlight set -5%"
+	},
+	"pulseaudio": {
+		"tooltip": false,
+		"scroll-step": 5,
+		"format": "{icon} {volume}%",
+		"format-muted": "",
+		"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"format-icons": {
+			"default": ["", "", ""]
+		}
+	},
+    "clock": {
+        "format": " {:%H:%M %d:%m}",
+		"timezone": "America/Argentina/San_Luis"
+    },
+	"network": {
+		"tooltip": false,
+		"format-wifi": "  {essid}",
+		"format-ethernet": ""
+	},
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{icon}  {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    }
+}
