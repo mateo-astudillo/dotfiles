@@ -1,0 +1,8 @@
+[user]
+	name = Mateo Astudillo
+	email = ast.mateo@gmail.com
+[core]
+	autocrlf = input
+	editor = helix
+[init]
+	defaultBranch = main
