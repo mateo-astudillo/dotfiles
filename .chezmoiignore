@@ -1,0 +1,6 @@
+{{ if eq .chezmoi.hostname "fedora" }}
+dot_config/hypr/
+dot_config/hypr/**
+dot_config/waybar/
+dot_config/waybar/**
+{{ end }}
