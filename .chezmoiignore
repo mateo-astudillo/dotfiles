@@ -4,3 +4,4 @@
 .config/waybar/
 .config/waybar/**
 {{ end }}
+README.md
