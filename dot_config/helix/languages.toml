@@ -30,3 +30,13 @@ indent = { tab-width = 2, unit = " " }
 [[language]]
 name = "toml"
 formatter = { command = "taplo", args = ["fmt", "-"] }
+
+[[language]]
+name = "xml"
+file-types = [ "xml", "svg", "xsd", "xslt", "xsl" ]
+auto-format = true
+formatter = { command = "xmllint", args = ["--format", "-"] }
+language-servers = [ "xml" ]
+
+[language-server.xml]
+command = "lemminx-linux"
