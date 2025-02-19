@@ -3,6 +3,6 @@
 	email = ast.mateo@gmail.com
 [core]
 	autocrlf = input
-	editor = helix
+	editor = hx
 [init]
 	defaultBranch = main
